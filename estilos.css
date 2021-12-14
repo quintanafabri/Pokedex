@@ -1,0 +1,39 @@
+#Cuerpo{
+height: 500px;
+    /*order: 5px black solid;  */
+    background-image: url("Imagenes/Pokedex.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    /*background-position: center;*/
+
+}
+
+#imagen{
+    margin-top: 130px;
+    margin-left: 100px;
+max-width: 400px;
+max-height: 220px;
+
+
+}
+
+#ingresar {
+    margin-left: 580px;
+}
+
+#respuesta {
+    max-height: 400px;
+    max-width: 500px;
+}
+
+#boton {
+    height: 30px;
+    width: 80px;
+
+}
+
+#boton2 {
+    margin-left: 160px;
+    margin-top: 25px;
+
+}
