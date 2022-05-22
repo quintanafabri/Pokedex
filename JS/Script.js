@@ -1,13 +1,14 @@
 const Pokedex_URL = "https://quintanafabri.github.io/pokemon-data/pokedex.json" 
 let  PokedexData = {};// Lugar donde guardamos los datos del archivo JSON
 let PokemonID = 0; // Lugar que ocupa en el JSON "Pokedex.json"
+let puntuacion = 0;
 
 
 
 
 
 function numeroRandomMath() {  // Funcion para generar el numero random y asignar ese numero a PokemonID.
-    let numero = Math.round( Math.random() * (807 - 0) + 0);
+    let numero = Math.round( Math.random() * (151 - 0) + 0);
     PokemonID = numero;
     ImagenLoad();
    
@@ -28,9 +29,13 @@ document.getElementById("foto").innerHTML = imagenHTML;
 
 function play(pokemon){//Funcion que devuelve la respuesta si ganaste o perdiste
 if (document.getElementById("respuesta").value === PokedexData[PokemonID].name.english){
-alert("GANASTE!!!!!!")}
+alert("GANASTE!!!!!!")
+puntuacion+=1;
+document.getElementById("puntuarText").innerHTML = "Puntuacion: "+puntuacion;
+
+}
 else{
-    alert("PERDISTE!")
+    alert("Incorrecto!"+"\n"+"El pokemon es: "+PokedexData[PokemonID].name.english)
 }
 }
 
